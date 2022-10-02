@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -12,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\MyEcommerce.Shared.Infrastructure\MyEcommerce.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\MyEcommerce.Shared.Infrastructure\MyEcommerce.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyEcommerce.Authflow.Infrastructure\MyEcommerce.Users.DAL.csproj" />
   </ItemGroup>
 
 </Project>

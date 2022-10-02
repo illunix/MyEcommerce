@@ -2,7 +2,7 @@
 
 namespace MyEcommerce.Shared.Abstractions.Request;
 
-public interface IHttpRequestHandler<TRequest> where TRequest : class, IHttpRequest
+public interface IHttpRequestHandler<TRequest> where TRequest : IHttpRequest
 {
     Task<IResult> Handle(
         TRequest req,

@@ -1,12 +1,11 @@
-using Microsoft.AspNetCore.OpenApi;
-using MyEcommerce.Shared.Infrastructure.Request;
+using MyEcommerce.Users.API;
+using MyEcommerce.Users.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddHttpRequests(typeof(Program))
-    .AddEndpointsApiExplorer()
-    .AddSwaggerGen();
+    .AddApi()
+    .AddDAL(builder.Configuration);
 
 var app = builder.Build();
 

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyEcommerce.Users.Core.Entities;
+using MyEcommerce.Users.DAL.Entities;
 
 namespace MyEcommerce.Users.DAL.Context;
 
-internal sealed class UsersDbContext : DbContext
+public sealed class UsersDbContext : DbContext
 {
     public DbSet<UserEntity> Users { get; init; } = null!;
 
@@ -13,7 +13,7 @@ internal sealed class UsersDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("authflow");
+        modelBuilder.HasDefaultSchema("users");
         modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
     }
 }

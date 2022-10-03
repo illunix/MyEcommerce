@@ -1,6 +1,6 @@
-﻿using MyEcommerce.Users.Core.Entities.Abstract;
+﻿using MyEcommerce.Users.DAL.Entities.Abstract;
 
-namespace MyEcommerce.Users.Core.Entities;
+namespace MyEcommerce.Users.DAL.Entities;
 
 public sealed record UserEntity(
     string Email,

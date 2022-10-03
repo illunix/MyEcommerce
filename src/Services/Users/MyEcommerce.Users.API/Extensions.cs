@@ -1,4 +1,5 @@
-﻿using MyEcommerce.Shared.Infrastructure.Request;
+﻿using FluentValidation;
+using MyEcommerce.Shared.Infrastructure.Request;
 
 namespace MyEcommerce.Users.API;
 
@@ -9,7 +10,8 @@ internal static class Extensions
         services
             .AddHttpRequests(typeof(Program))
             .AddEndpointsApiExplorer()
-            .AddSwaggerGen();
+            .AddSwaggerGen()
+            .AddValidatorsFromAssemblyContaining<Program>();
 
         return services;
     }

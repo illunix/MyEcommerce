@@ -1,4 +1,4 @@
-﻿namespace MyEcommerce.Users.Core.Entities.Abstract;
+﻿namespace MyEcommerce.Users.DAL.Entities.Abstract;
 
 public record EntityBase
 {

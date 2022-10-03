@@ -1,15 +1,21 @@
 ﻿using MyEcommerce.Shared.Abstractions.Request;
-using MyEcommerce.Shared.Infrastructure.Http;
+using MyEcommerce.Shared.Infrastructure.Request;
+using MyEcommerce.Users.DAL.Context;
 
 namespace MyEcommerce.Users.Application.Commands.Handlers;
 
-internal sealed class SignInCommandHandler : IHttpRequestHandler<SignInCommand>
+internal sealed class SignInCommandHandler : HttpRequestHandler<SignInCommand>
 {
-    public async Task<IHttpResult> Handle(
+    private readonly UsersDbContext _ctx;
+
+    public SignInCommandHandler(UsersDbContext ctx)
+        => _ctx = ctx;
+
+    public override async Task<IHttpResult> Handle(
         SignInCommand req,
         CancellationToken ct 
     )
     {
-        return Results.Ok("elo");
+        return Ok();
     }
 }

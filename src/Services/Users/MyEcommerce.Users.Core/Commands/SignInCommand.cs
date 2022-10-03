@@ -4,7 +4,7 @@ using MyEcommerce.Shared.Infrastructure.Http.Attributes;
 namespace MyEcommerce.Users.Application.Commands;
 
 [POST]
-internal readonly record struct SignInCommand(
+public readonly record struct SignInCommand(
     string Email,
     string Password
 ) : IHttpRequest;

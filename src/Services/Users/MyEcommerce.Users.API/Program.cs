@@ -1,11 +1,13 @@
 using MyEcommerce.Users.API;
+using MyEcommerce.Users.Core;
 using MyEcommerce.Users.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddApi()
-    .AddDAL(builder.Configuration);
+    .AddDAL(builder.Configuration)
+    .AddCore();
 
 var app = builder.Build();
 

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\MyEcommerce.Shared.Abstractions\MyEcommerce.Shared.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\MyEcommerce.Shared.Infrastructure\MyEcommerce.Shared.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

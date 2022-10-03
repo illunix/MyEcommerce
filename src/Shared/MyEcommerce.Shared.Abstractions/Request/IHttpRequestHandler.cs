@@ -4,7 +4,7 @@ namespace MyEcommerce.Shared.Abstractions.Request;
 
 public interface IHttpRequestHandler<TRequest> where TRequest : IHttpRequest
 {
-    Task<IResult> Handle(
+    Task<IHttpResult> Handle(
         TRequest req,
         CancellationToken ct = default
     );
